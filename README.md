@@ -1,6 +1,4 @@
 # it3038c-scripts
-
-
 Javascript code block
 
 Hello
