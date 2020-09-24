@@ -51,3 +51,9 @@ $Body += "Today's date is {0}." -f $Date
 write-host($Body)
 
 Send-MailMessage -To "prayag13@gmail.com" -From "prayag13@gmail.com" -Subject "IT3038C Windows Sysinfo" -Body $Body -SmtpServer "Smtp.gmail.com" -port 587 -UseSsl -Credential (Get-Credential)
+
+
+import datetime
+now = datetime.datetime.now()
+print ("Current date and time : ")
+print (now.strftime("%Y-%m-%d %H:%M:%S"))
