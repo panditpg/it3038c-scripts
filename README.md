@@ -4,6 +4,7 @@ Javascript code block
 Hello
 
 It's me, a Networking student!
+
 Lab 2
 
 #!/bin/bash
