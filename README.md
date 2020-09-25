@@ -39,6 +39,8 @@ write-host($Body)
 $Body += "User is {0}." -f $env:USERNAME
 write-host($Body)
 
+
+
 $HOSTNAME = "panditpg-win"
 $Body += "Hostname is {0}." -f $HOSTNAME
 write-host($Body)
@@ -53,7 +55,32 @@ write-host($Body)
 Send-MailMessage -To "prayag13@gmail.com" -From "prayag13@gmail.com" -Subject "IT3038C Windows Sysinfo" -Body $Body -SmtpServer "Smtp.gmail.com" -port 587 -UseSsl -Credential (Get-Credential)
 
 
+
 import datetime
 now = datetime.datetime.now()
 print ("Current date and time : ")
-print (now.strftime("%Y-%m-%d %H:%M:%S"))
+print (now.strftime("%Y-%m-%d %H:%M:%S))
+
+
+using System;
+using System.Speech.Synthesis;
+namespace FirstSynthesis
+{
+    class program
+    {
+        static void Main(string[] args)
+        {
+            // This line will initialize a new instance of the SpeechSynthesizer.
+            SpeechSynthesizer synth = new SpeechSynthesizer();
+
+            // This line will configure the audio output.
+            synth.SetOutputToDefaultAudioDevice();
+
+            // Speak a string.
+            synth.Speak(This code demonstrates a basic use of Speech Synthesizer");
+            Console.WriteLine();
+            Console.WriteLine("This line of code will press any key to exit...");
+            Console.ReadKey();
+        }
+    }
+}
