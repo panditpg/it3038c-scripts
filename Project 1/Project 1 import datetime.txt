@@ -1,4 +1,27 @@
-import datetime
-now = datetime.datetime.now()
-print ("Current date and time : ")
-print (now.strftime("%Y-%m-%d %H:%M:%S))
+//import datetime
+//now = datetime.datetime.now()
+//print ("Current date and time : ")
+//print (now.strftime("%Y-%m-%d %H:%M:%S))
+
+using System;
+using System.Speech.Synthesis;
+namespace FirstSynthesis
+{
+    class program
+    {
+        static void Main(string[] args)
+        {
+            // This line will initialize a new instance of the SpeechSynthesizer.
+            SpeechSynthesizer synth = new SpeechSynthesizer();
+
+            // This line will configure the audio output.
+            synth.SetOutputToDefaultAudioDevice();
+
+            // Speak a string.
+            synth.Speak(This code demonstrates a basic use of Speech Synthesizer");
+            Console.WriteLine();
+            Console.WriteLine("This line of code will press any key to exit...");
+            Console.ReadKey();
+        }
+    }
+}
