@@ -47,12 +47,12 @@ var server = http.createServer(function(req, res){
         myHostName=os.hostname();
         html=`
         <!DOCTYPE html>
-            <html>
-            <head>
+            <htdml>
+            <hea>
                 <title>System Information</title>
             </head>
             <body>
-                <p>Hostname: ${myHostName}</p>
+                <p>Hostname: ${myHostName()}</p>
                 <p>IP: ${ip.address()}</p>
                 <p>Server Uptime: ${os.uptime()} / Days: 10,  Hours: 7, Minutes: 32, Seconds: 15 </p>
                 <p>Total Memory: ${os.totalmem() / 1048576 +  'MB'} </p>
