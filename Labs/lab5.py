@@ -45,6 +45,13 @@ if guess == number:
     print('You guessed the number in ' + str(number_of_guesses) + ' tries!')
 else:
     print('You did not guess the number, The number was ' + str(number))
+<<<<<<< HEAD
+
+    ###sources: A. https://djangocentral.com/creating-a-guessing-game-in-python/
+    ###B. https://stackoverflow.com/questions/53038112/number-guessing-game-python/53038208
+
+=======
   
   ###sources: A.  https://stackoverflow.com/questions/53038112/number-guessing-game-python/53038208
   ###B. https://djangocentral.com/creating-a-guessing-game-in-python/
+>>>>>>> 25a8877f4ba7a0bca9009d48197c7e315329d6e1
