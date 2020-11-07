@@ -1,14 +1,8 @@
-// setTimeout.js
-let cue = 'The folks are here!';
+var http = require("http");
+var dt = require("./myfirstmodule");
+http.createServer(function (req, res) {
+    res.writeHead(200, {"Content-Type": "text/html"});
+    res.write("The date and time are currently: " + dt.myDateTime());
+    res.end();
 
-//But the cue will not announce till 4000ms have passed with setTimeout
-setTimeout(function() {
-    return console.log(cue);
-
-}, 4000);
-
-// I'll execute as soon as it's done.
-console.log('Waiting for the folks now. The folks are here!');
-
-
-
+}).listen(8080);
