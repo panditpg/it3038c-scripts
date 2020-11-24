@@ -2,3 +2,5 @@
 *.log
 .pycache
 *node_modules*
+venv*
+.vscode*
