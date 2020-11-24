@@ -25,7 +25,7 @@ echo $content
 mail -s "IT3038C Linux IP" $emailaddress <<< $(echo -e $content)
 
 ### Lab 7
-Hi
+hi
 Here's how I can run a Python script as being created that uses a plugin named Pillow. At first, let me create a virtual env known as scripts. I can call it as I like.
 ```bash
 virtualenv ~/venv/pillow
