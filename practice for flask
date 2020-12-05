@@ -1,0 +1,123 @@
+
+##############for web.py################
+from routes import app
+
+if __name__ == "__main__":
+    app.run(port=5000, host='0.0.0.0')
+    ##app.run((debug=True, port=5000, host='0.0.0.0')
+	
+
+
+
+################for routes.py##############
+from flask import Flask
+
+app = Flask(__name__)
+app.config.from_object(__name__)
+
+@app.route('/')
+def hello():
+   return 'Hello, World!'
+
+   ##@app.route('/welcome')
+##def welcome():
+   ##return render_template("welcome.html")
+   
+   Another change made here:
+   from flask import Flask, render_template
+
+app = Flask(__name__)
+app.config.from_object(__name__)
+
+@app.route('/')
+def hello():
+   ##return 'Hello, World!'
+   name = "Prayag"
+   return render_template("index.html", name=name)
+
+@app.route('/welcome')
+def welcome():
+   return render_template("welcome.html")
+
+
+Another change made here:
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+app.config.from_object(__name__)
+
+@app.route('/')
+def hello():
+   ##return 'Hello, World!'
+   ##name = "Prayag"
+   return render_template("index.html")
+
+@app.route('/welcome', methods=['POST'])
+def welcome():
+   return render_template("welcome.html", myName=request.form['myName'])
+   
+   
+#######for index.html##################
+
+{% extends "layout.html" %}
+
+{% block content %}
+<p><em>Hello, {{ name }}. Welcome to my app!</em></p>
+{% endblock %}
+
+Another changes made as folllows:
+
+{% extends "layout.html" %}
+
+{% block content %}
+<p><em>What is your name?</em>
+    <form action="/welcome" method="POST">
+        <input name="myName">
+        <input type="submit" value="Submit">
+    </form>
+</p>
+{% endblock %}
+
+   
+   
+   
+##########for layout.html##############
+   <!DOCTYPE html>
+   <head>
+   </head>
+
+   <body>
+      <H1>Flask app!</H1>
+      <br />
+          {% block content %}
+          {% endblock %}
+
+  </body>
+  </html>
+  
+  
+  
+##########for welcome html###################
+  {% extends "layout.html" %}
+
+{% block content %}
+<p><em>This is the Welcome page!</em></p>
+{% endblock %}
+
+Again it can be changed as follows:
+{% extends "layout.html" %}
+
+{% block content %}
+<p><em>Hello, {{name}}. Welcome to my app!</em></p>
+
+{% endblock %}
+
+Another changes made here again:
+{% extends "layout.html" %}
+
+{% block content %}
+<p><em>Hello, {{ myName }}! This is the Welcome page!</em></p>
+{% endblock %}
+
+
+
