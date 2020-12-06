@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Guess The Number!</title>
+    </head>
+    <body>
+        <h1>Guess The Number!</h1>
+        {% if try_number == 1 %}
+        <p>I've thought of a number between 1 and 10. Could you please guess it?</p>
+        {% else %}
+        <p>Sorry, {{ guess }} is incorrect. Please try it again!</p>
+        {% endif %}
+        <form action="">
+            Try #{{ try_number }}: <input type="text" name="guess">
+            <input type="submit">
+        </form>
+    </body>
+</html>

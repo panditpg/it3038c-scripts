@@ -1,0 +1,10 @@
+<html>
+    <head>
+        <title>Guess The Number: You Win!</title>
+    </head>
+    <body>
+        <h1>Guess The Number!</h1>
+        <p>Congratulations! {{ session['answer'] }} is the correct number.</p>
+        <p><a href="{{ url_for('index') }}">Would You Like To Play It Again?</a></p>
+    </body>
+</html>
