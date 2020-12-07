@@ -5,7 +5,7 @@
 #### This application literally contains the code in guess.py under the flask main heading and the templates.
 #### This project has four files. Among them, guess.html, lose.html, and win.html are created under the templates.
 #### Now, why templates? Because they help isolating between logic and presentation.
-#### That's why they are inside the application package of flask.So, the first thing is first. To run the code first Window,then VSCode, then go to guess.py. In the terminal (widow console), follow: 
+#### That's why they are inside the application package of flask.So, the first thing is first. To run the code first Window,then VSCode, then go to guess.py. In the terminal (window console), follow: 
 py -3 -m venv C:\venv\flask
 C:\venv\flask\Scripts\Activate.ps1
 pip install flask
