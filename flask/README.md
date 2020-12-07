@@ -66,6 +66,7 @@ if __name__ == '__main__':
     </body>
 </html>
 
+
 ############# Template number two is win.html #################
 
 <html>
@@ -79,6 +80,7 @@ if __name__ == '__main__':
     </body>
 </html>
 
+
 ############# And the last template is lose.html #################
 
 <html>
@@ -91,6 +93,7 @@ if __name__ == '__main__':
         <p><a href="{{ url_for('index') }}">Please play it again</a></p>
     </body>
 </html>
+
 
 #######################
 #####  References #####
