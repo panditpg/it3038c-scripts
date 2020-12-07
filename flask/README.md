@@ -5,7 +5,10 @@
 #### This application literally contains the code in guess.py under the flask main heading and the templates.
 #### This project has four files. Among them, guess.html, lose.html, and win.html are created under the templates.
 #### Now, why templates? Because they help isolating between logic and presentation.
-#### That's why they are inside the application package of flask. 
+#### That's why they are inside the application package of flask.
+#### The Guess The Number application presented below is accessed throguh the browser with localhost:5000/guess. 
+#### If you type a number, it's gonna display sorry 1 (the number) is incorrect. Please try it again! Until you enter the correct number, it's like a fun game.
+#### More importantly, it's gonna give the idea of how to decode flask user session. For this, on the browser after you submit the the number, in a blank area, right click and follow the inspect element. Then click on the icon as you prefer or need to get the response or output for such as Inspector, Console, Debugger, Network, {} style editor, performance, memory, storage accessibility, and application functionalities.
 
 
 ############# The application is in file guess.py  #################
@@ -20,8 +23,8 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY') or \
 
 @app.route('/')
 def index():
-    ##### The "answer" value cannot be stored in the user session as done below
-    ##### Eventhough the session is sent to the client in a cookie, that is not encrypted!
+    ##### The "answer" value cannot be stored in the user session like it is shown as follows.
+    ##### Eventhough the session is sent to the client in a cookie, it is not encrypted!
     session['answer'] = random.randint(1, 10)
     session['try_number'] = 1
     return redirect(url_for('guess'))
@@ -47,14 +50,14 @@ if __name__ == '__main__':
 
 <html>
     <head>
-        <title>Guess the number!</title>
+        <title>Guess The Number!</title>
     </head>
     <body>
-        <h1>Guess the number!</h1>
+        <h1>Guess The Number!</h1>
         {% if try_number == 1 %}
-        <p>I thought of a number from 1 to 10. Can you guess it?</p>
+        <p>I've thought of a number between 1 and 10. Could you please guess it?</p>
         {% else %}
-        <p>Sorry, {{ guess }} is incorrect. Try again!</p>
+        <p>Sorry, {{ guess }} is incorrect. Please try it again!</p>
         {% endif %}
         <form action="">
             Try #{{ try_number }}: <input type="text" name="guess">
@@ -67,12 +70,12 @@ if __name__ == '__main__':
 
 <html>
     <head>
-        <title>Guess the number: You win!</title>
+        <title>Guess The Number: You win!</title>
     </head>
     <body>
-        <h1>Guess the number!</h1>
-        <p>Congratulations, {{ session['answer'] }} is the correct number.</p>
-        <p><a href="{{ url_for('index') }}">Play again</a></p>
+        <h1>Guess The Number!</h1>
+        <p>Congratulations! {{ session['answer'] }} is the correct number.</p>
+        <p><a href="{{ url_for('index') }}">Would You Like To Play It Again?</a></p>
     </body>
 </html>
 
@@ -80,12 +83,12 @@ if __name__ == '__main__':
 
 <html>
     <head>
-        <title>Guess the number: You lose!</title>
+        <title>Guess The Number: You lose!</title>
     </head>
     <body>
-        <h1>Guess the number!</h1>
-        <p>Sorry, {{ guess }} is incorrect. My guess was {{ session['answer'] }}.</p>
-        <p><a href="{{ url_for('index') }}">Play again</a></p>
+        <h1>Guess The Number!</h1>
+        <p>Sorry, {{ guess }} is incorrect. Actually, my guess was {{ session['answer'] }}.</p>
+        <p><a href="{{ url_for('index') }}">Please play it again</a></p>
     </body>
 </html>
 
