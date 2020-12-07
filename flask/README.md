@@ -5,8 +5,13 @@
 #### This application literally contains the code in guess.py under the flask main heading and the templates.
 #### This project has four files. Among them, guess.html, lose.html, and win.html are created under the templates.
 #### Now, why templates? Because they help isolating between logic and presentation.
-#### That's why they are inside the application package of flask.
-#### The Guess The Number application presented below is accessed throguh the browser with localhost:5000/guess. 
+#### That's why they are inside the application package of flask.So, the first thing is first. To run the code first Window,then VSCode, then go to guess.py. In the terminal (widow console), follow: 
+py -3 -m venv C:\venv\flask
+C:\venv\flask\Scripts\Activate.ps1
+pip install flask
+cd .\flask
+Then finally type: python guess.py
+#### Then The Guess The Number application presented below is accessed throguh the browser with localhost:5000/guess. 
 #### If you type a number, it's gonna display sorry 1 (the number) is incorrect. Please try it again! Until you enter the correct number, or after third attempt it's gonna say the answer, or if your number is correct, it's gonna say Congratulations! 8 (depends) is the correct answer. It's like a fun game, right!
 #### More importantly, it's gonna give the idea of how to decode flask user session. For this, on the browser after you submit the the number, in a blank area, right click and follow the inspect element. Then click on the icon as you prefer or need to get the response or output from such as Inspector, Console, Debugger, Network, {} style editor, performance, memory, storage accessibility, and application functionalities. I decided to continue working on flask because it combines python and html and displays through the localhost in the browser. It also touches and introduces previous labs and projects I've learned and worked so far. For example, server, webscrapping, web-browsing, listening or calling through a server with ports associated to localhost on the browser by connecting codes between templates and index and htmls. Last but not the least, this project would give someone an idea of understanding not to have misconception of as flask user session is entirely secured. Don't be in trap literally! Because one can decode a flask user session without requiring the application's secret key used for encoding it (like the one given in the guess.py). Meaning, don't ever store secrets in a flask session cookie.
 
